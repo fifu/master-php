@@ -68,3 +68,6 @@ SELECT * FROM usuarios ORDER BY id DESC LIMIT 2;
 /*      ACTUALIZAR DATOOS       */
 
 UPDATE usuarios SET nombre = 'Brayanth', apellido = 'Castillo', email ='iampermmit@outlook.com', password = 'permmit12', fecha = '2023-01-01' WHERE id = 4;
+
+/*      BORRAR REGISTROS        */
+DELETE FROM usuarios WHERE password = '777'; 
