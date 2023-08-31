@@ -56,8 +56,15 @@ SELECT email, (id+5) AS operacion FROM usuarios;
 
 SELECT email FROM usuarios WHERE (nombre) = 'Marco' OR (nombre) = 'Randy';
 SELECT id, nombre, email FROM usuarios WHERE  apellido LIKE '%l%' AND password = '12345';
-/*      MOSTRAR USUARIOS CUYA FECAHA DE IUNGRESO TENGA UN AÑO PAR     */
+/*      MOSTRAR USUARIOS CUYA FECAHA DE IUNGRESO TENGA UN AÑO QUE SEA PAR     */
 SELECT * FROM usuarios WHERE (YEAR(fecha)%2=0);
 /*      MOSTRAR USUARIOS      */
 
 SELECT UPPER (nombre) AS Nombre , apellido FROM usuarios WHERE LENGTH (nombre)>4 AND YEAR(fecha)<2024;
+
+SELECT * FROM usuarios ORDER BY id DESC;
+SELECT * FROM usuarios ORDER BY id DESC LIMIT 2;
+
+/*      ACTUALIZAR DATOOS       */
+
+UPDATE usuarios SET nombre = 'Brayanth', apellido = 'Castillo', email ='iampermmit@outlook.com', password = 'permmit12', fecha = '2023-01-01' WHERE id = 4;
